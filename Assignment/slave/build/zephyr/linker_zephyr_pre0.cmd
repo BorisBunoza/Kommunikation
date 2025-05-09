@@ -119,6 +119,7 @@ __device_deps_end = .;
 gpio_driver_api_area : SUBALIGN(4) { _gpio_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._gpio_driver_api.static.*))); _gpio_driver_api_list_end = .; } > FLASH
 i2c_driver_api_area : SUBALIGN(4) { _i2c_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._i2c_driver_api.static.*))); _i2c_driver_api_list_end = .; } > FLASH
 i2c_target_driver_api_area : SUBALIGN(4) { _i2c_target_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._i2c_target_driver_api.static.*))); _i2c_target_driver_api_list_end = .; } > FLASH
+led_driver_api_area : SUBALIGN(4) { _led_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._led_driver_api.static.*))); _led_driver_api_list_end = .; } > FLASH
 shared_irq_driver_api_area : SUBALIGN(4) { _shared_irq_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._shared_irq_driver_api.static.*))); _shared_irq_driver_api_list_end = .; } > FLASH
 crypto_driver_api_area : SUBALIGN(4) { _crypto_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._crypto_driver_api.static.*))); _crypto_driver_api_list_end = .; } > FLASH
 adc_driver_api_area : SUBALIGN(4) { _adc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._adc_driver_api.static.*))); _adc_driver_api_list_end = .; } > FLASH
@@ -154,7 +155,6 @@ i2s_driver_api_area : SUBALIGN(4) { _i2s_driver_api_list_start = .; KEEP(*(SORT_
 i3c_driver_api_area : SUBALIGN(4) { _i3c_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._i3c_driver_api.static.*))); _i3c_driver_api_list_end = .; } > FLASH
 ipm_driver_api_area : SUBALIGN(4) { _ipm_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._ipm_driver_api.static.*))); _ipm_driver_api_list_end = .; } > FLASH
 kscan_driver_api_area : SUBALIGN(4) { _kscan_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._kscan_driver_api.static.*))); _kscan_driver_api_list_end = .; } > FLASH
-led_driver_api_area : SUBALIGN(4) { _led_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._led_driver_api.static.*))); _led_driver_api_list_end = .; } > FLASH
 led_strip_driver_api_area : SUBALIGN(4) { _led_strip_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._led_strip_driver_api.static.*))); _led_strip_driver_api_list_end = .; } > FLASH
 lora_driver_api_area : SUBALIGN(4) { _lora_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._lora_driver_api.static.*))); _lora_driver_api_list_end = .; } > FLASH
 mbox_driver_api_area : SUBALIGN(4) { _mbox_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._mbox_driver_api.static.*))); _mbox_driver_api_list_end = .; } > FLASH

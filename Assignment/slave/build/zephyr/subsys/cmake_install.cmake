@@ -39,101 +39,101 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/canbus/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/canbus/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/debug/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/debug/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/fb/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/fb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/fs/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/fs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/ipc/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/ipc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/logging/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/logging/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/mem_mgmt/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/mem_mgmt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/mgmt/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/mgmt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/modbus/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/modbus/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/pm/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/pm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/portability/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/portability/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/random/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/random/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/rtio/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/rtio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/sd/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/sd/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/stats/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/stats/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/storage/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/storage/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/task_wdt/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/task_wdt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/testsuite/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/testsuite/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/tracing/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/tracing/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/subsys/usb/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/subsys/usb/cmake_install.cmake")
 endif()
 

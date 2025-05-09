@@ -131,6 +131,38 @@ uintptr_t z_mrsh_i2c_target_driver_unregister(uintptr_t arg1, uintptr_t arg2, ui
          uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 
 __weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_led_blink(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_led_get_info(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_led_set_brightness(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_led_write_channels(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_led_set_channel(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_led_set_color(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_led_on(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
+uintptr_t z_mrsh_led_off(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
+         uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
+
+__weak ALIAS_OF(handler_no_syscall)
 uintptr_t z_mrsh_uart_err_check(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3,
          uintptr_t arg4, uintptr_t arg5, uintptr_t arg6, void *ssf);
 
@@ -665,6 +697,14 @@ const _k_syscall_handler_t _k_syscall_table[K_SYSCALL_LIMIT] = {
 	[K_SYSCALL_I2C_RECOVER_BUS] = z_mrsh_i2c_recover_bus,
 	[K_SYSCALL_I2C_TARGET_DRIVER_REGISTER] = z_mrsh_i2c_target_driver_register,
 	[K_SYSCALL_I2C_TARGET_DRIVER_UNREGISTER] = z_mrsh_i2c_target_driver_unregister,
+	[K_SYSCALL_LED_BLINK] = z_mrsh_led_blink,
+	[K_SYSCALL_LED_GET_INFO] = z_mrsh_led_get_info,
+	[K_SYSCALL_LED_SET_BRIGHTNESS] = z_mrsh_led_set_brightness,
+	[K_SYSCALL_LED_WRITE_CHANNELS] = z_mrsh_led_write_channels,
+	[K_SYSCALL_LED_SET_CHANNEL] = z_mrsh_led_set_channel,
+	[K_SYSCALL_LED_SET_COLOR] = z_mrsh_led_set_color,
+	[K_SYSCALL_LED_ON] = z_mrsh_led_on,
+	[K_SYSCALL_LED_OFF] = z_mrsh_led_off,
 	[K_SYSCALL_UART_ERR_CHECK] = z_mrsh_uart_err_check,
 	[K_SYSCALL_UART_POLL_IN] = z_mrsh_uart_poll_in,
 	[K_SYSCALL_UART_POLL_IN_U16] = z_mrsh_uart_poll_in_u16,

@@ -39,76 +39,81 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/disk/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/disk/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/firmware/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/firmware/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/interrupt_controller/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/interrupt_controller/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/misc/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/misc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/pcie/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/pcie/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/usb/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/usb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/usb_c/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/usb_c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/clock_control/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/clock_control/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/console/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/console/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/gpio/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/gpio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/i2c/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/i2c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/mfd/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/led/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/pinctrl/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/mfd/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/serial/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/pinctrl/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/drivers/timer/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/serial/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/drivers/timer/cmake_install.cmake")
 endif()
 

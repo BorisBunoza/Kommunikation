@@ -10,6 +10,8 @@
 
 #define K_SYSCALL_DRIVER_I2C_TARGET(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, i2c_target, I2C_TARGET)
 
+#define K_SYSCALL_DRIVER_LED(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, led, LED)
+
 #define K_SYSCALL_DRIVER_SHARED_IRQ(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, shared_irq, SHARED_IRQ)
 
 #define K_SYSCALL_DRIVER_CRYPTO(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, crypto, CRYPTO)
@@ -79,8 +81,6 @@
 #define K_SYSCALL_DRIVER_IPM(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, ipm, IPM)
 
 #define K_SYSCALL_DRIVER_KSCAN(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, kscan, KSCAN)
-
-#define K_SYSCALL_DRIVER_LED(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, led, LED)
 
 #define K_SYSCALL_DRIVER_LED_STRIP(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, led_strip, LED_STRIP)
 

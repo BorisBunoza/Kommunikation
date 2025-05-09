@@ -1561,7 +1561,7 @@ zephyr_udc0: &usb1 {
  status = "okay";
 };
 # 0 "<command-line>" 2
-# 1 "/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/frdm_mcxn236.overlay" 1
+# 1 "/home/boris/Kommunikation/Assignment/slave/frdm_mcxn236.overlay" 1
 / {
  zephyr,user {
   i2c = <&flexcomm2_lpi2c2>;

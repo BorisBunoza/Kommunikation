@@ -12,9 +12,11 @@
  */
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
 #include <esp_log.h>
 #include <esp_random.h>
 #include <driver/gpio.h>
+#include <esp_task_wdt.h>
 #include <driver/i2c_master.h>
 #include <bootloader_random.h>
 
@@ -23,9 +25,67 @@
 #define PIN_SCL GPIO_NUM_7 // GPIO for SCL
 #define CLOCK_RATE 400000  // Communication Speed
 #define SLAVE_ADDRESS 0x55 // Slave Address
-#define MSG_SIZE 8         // Buffer Length
+#define MSG_SIZE 1         // Buffer Length
+#define STRING_LEN 20
 
-static const char *TAG = "I2C_MASTER";
+void clear_input_buffer()
+{
+    int ch;
+    while ((ch = getchar()) != '\n' && ch != EOF)
+        ;
+}
+
+static char get_command(char *string, size_t length)
+{
+    char chr = 0;
+    size_t len = 0;
+
+    clear_input_buffer();
+
+    while (len < length)
+    {
+        chr = getchar();
+        if (chr == '\n' || chr == '\r')
+        {
+            break;
+        }
+        else if ((chr >= 'a') && (chr <= 'z'))
+        {
+            putchar(chr);
+            string[len] = chr;
+            len++;
+        }
+        else
+        {
+            ;
+        }
+    }
+
+    string[len] = '\0';
+
+    if (strcmp(string, "red") == 0)
+    {
+        chr = 'R';
+    }
+    else if (strcmp(string, "blue") == 0)
+    {
+        chr = 'B';
+    }
+    else if (strcmp(string, "green") == 0)
+    {
+        chr = 'G';
+    }
+    else if (strcmp(string, "off") == 0)
+    {
+        chr = 'O';
+    }
+    else
+    {
+        chr = 'F';
+    }
+
+    return chr;
+}
 
 void app_main(void)
 {
@@ -48,54 +108,55 @@ void app_main(void)
     };
     ESP_ERROR_CHECK(i2c_master_bus_add_device(bus_handle, &dev_config, &dev_handle));
 
-    ESP_LOGI(TAG, "I2C Master initialized successfully");
-
-    sleep(2);
-
-    printf("\n============= I2C Devices =============\n");
     for (int addr = 0; addr < 128; addr++)
     {
         if (ESP_OK == i2c_master_probe(bus_handle, addr, 50))
         {
-            printf("I2C device found at address 0x%02X\n", addr);
+            
         }
     }
-    printf("=======================================\n\n");
 
-    // Look at: https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/random.html
-    bootloader_random_enable();
-    srand(esp_random());
-    bootloader_random_disable();
+    esp_task_wdt_deinit();
 
     uint8_t buffer[MSG_SIZE + 1] = {0};
+    char string[STRING_LEN + 1];
 
     while (1)
     {
-        for (int i = 0; i < MSG_SIZE; i++)
-        {
-            buffer[i] = 'a' + (rand() % 26);
-        }
 
-        printf("    Sent: ");
-        if (ESP_OK == i2c_master_transmit(dev_handle, buffer, MSG_SIZE, -1))
+        printf("\nEnter the LED state: ");
+
+        buffer[0] = get_command(string, STRING_LEN);
+
+        if (buffer[0] != 'F')
         {
-            printf("%s\nReceived: ", buffer);
-            if (ESP_OK == i2c_master_receive(dev_handle, buffer, MSG_SIZE, -1))
+            if (ESP_OK == i2c_master_transmit(dev_handle, buffer, MSG_SIZE, -1))
             {
-                printf("%s", buffer);
+                if (ESP_OK == i2c_master_receive(dev_handle, buffer, MSG_SIZE, -1))
+                {
+                    if (buffer[0] == 'D')
+                    {
+                        printf(" => done");
+                    }
+                    else
+                    {
+                        printf(" => fail");
+                    }
+                }
+                else
+                {
+                    printf(" => fail");
+                }
             }
             else
             {
-                printf("Failed");
+                printf(" => fail");
             }
-            printf("\n");
         }
         else
         {
-            printf("Failed");
+            printf(" => fail");
         }
         printf("\n");
-
-        sleep(1);
     }
 }

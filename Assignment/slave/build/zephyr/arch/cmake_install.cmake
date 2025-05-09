@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/arch/common/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/arch/common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/arch/arch/arm/cmake_install.cmake")
+  include("/home/boris/Kommunikation/Assignment/slave/build/zephyr/arch/arch/arm/cmake_install.cmake")
 endif()
 

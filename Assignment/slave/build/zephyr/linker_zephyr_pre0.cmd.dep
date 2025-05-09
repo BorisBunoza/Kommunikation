@@ -1,12 +1,12 @@
 linker_zephyr_pre0.cmd: \
  /home/boris/zephyr/zephyr/include/zephyr/arch/arm/cortex_m/scripts/linker.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/zephyr/autoconf.h \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/zephyr/autoconf.h \
  /home/boris/zephyr/zephyr/include/zephyr/linker/sections.h \
  /home/boris/zephyr/zephyr/include/zephyr/linker/section_tags.h \
  /home/boris/zephyr/zephyr/include/zephyr/toolchain.h \
  /home/boris/zephyr/zephyr/include/zephyr/toolchain/gcc.h \
  /home/boris/zephyr/zephyr/include/zephyr/devicetree.h \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/zephyr/devicetree_generated.h \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/zephyr/devicetree_generated.h \
  /home/boris/zephyr/zephyr/include/zephyr/irq_multilevel.h \
  /home/boris/zephyr/zephyr/include/zephyr/sys/util.h \
  /home/boris/zephyr/zephyr/include/zephyr/sys/util_macro.h \
@@ -34,14 +34,14 @@ linker_zephyr_pre0.cmd: \
  /home/boris/zephyr/zephyr/include/zephyr/linker/devicetree_regions.h \
  /home/boris/zephyr/zephyr/include/zephyr/linker/linker-defs.h \
  /home/boris/zephyr/zephyr/include/zephyr/toolchain/common.h \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/zephyr/offsets.h \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/zephyr/offsets.h \
  /home/boris/zephyr/zephyr/include/zephyr/linker/linker-tool.h \
  /home/boris/zephyr/zephyr/include/zephyr/linker/linker-tool-gcc.h \
  /home/boris/zephyr/zephyr/include/zephyr/kernel/mm.h \
  /home/boris/zephyr/zephyr/include/zephyr/kernel/internal/mm.h \
  /home/boris/zephyr/zephyr/include/zephyr/linker/linker-devnull.h \
  /home/boris/zephyr/zephyr/include/zephyr/linker/rel-sections.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/snippets-rom-start.ld \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/snippets-rom-start.ld \
  /home/boris/zephyr/zephyr/include/../arch/common/rom_start_address.ld \
  /home/boris/zephyr/zephyr/include/../arch/common/fill_with_zeros.ld \
  /home/boris/zephyr/zephyr/include/../arch/common/rom_start_offset.ld \
@@ -53,7 +53,7 @@ linker_zephyr_pre0.cmd: \
  /home/boris/zephyr/zephyr/include/zephyr/linker/common-rom/common-rom-kernel-devices.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/iterable_sections.h \
  /home/boris/zephyr/zephyr/include/zephyr/linker/device-deps.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/device-api-sections.ld \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/device-api-sections.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/common-rom/common-rom-ztest.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/common-rom/common-rom-init.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/common-rom/common-rom-net.ld \
@@ -62,26 +62,26 @@ linker_zephyr_pre0.cmd: \
  /home/boris/zephyr/zephyr/include/zephyr/linker/common-rom/common-rom-debug.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/common-rom/common-rom-interrupt-controllers.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/common-rom/common-rom-misc.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/snippets-rom-sections.ld \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/snippets-rom-sections.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/thread-local-storage.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/snippets-rodata.ld \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/snippets-rodata.ld \
  /home/boris/zephyr/zephyr/include/../arch/arm/core/swi_tables.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/kobject-rom.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/cplusplus-rom.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/snippets-ram-sections.ld \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/snippets-ram-sections.ld \
  /home/boris/zephyr/zephyr/include/../arch/common/ramfunc.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/snippets-ramfunc-section.ld \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/snippets-ramfunc-section.ld \
  /home/boris/zephyr/zephyr/include/../../modules/hal/nxp/mcux/quick_access_code.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/snippets-rwdata.ld \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/snippets-rwdata.ld \
  /home/boris/zephyr/zephyr/include/../../modules/hal/nxp/mcux/quick_access_data.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/common-ram.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/kobject-data.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/cplusplus-ram.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/snippets-data-sections.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/snippets-sections.ld \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/snippets-data-sections.ld \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/snippets-sections.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/intlist.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/debug-sections.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/common-noinit.ld \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/build/zephyr/include/generated/snippets-noinit.ld \
+ /home/boris/Kommunikation/Assignment/slave/build/zephyr/include/generated/snippets-noinit.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/kobject-priv-stacks.ld \
  /home/boris/zephyr/zephyr/include/zephyr/linker/ram-end.ld

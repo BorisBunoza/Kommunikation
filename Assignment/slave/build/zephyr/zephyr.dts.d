@@ -23,4 +23,4 @@ empty_file.o: /home/boris/zephyr/zephyr/misc/empty_file.c \
  /home/boris/zephyr/modules/hal/nxp/dts/nxp/mcx/MCXN236VDF-pinctrl.h \
  /home/boris/zephyr/zephyr/include/zephyr/dt-bindings/i2c/i2c.h \
  /home/boris/zephyr/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
- /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/frdm_mcxn236.overlay
+ /home/boris/Kommunikation/Assignment/slave/frdm_mcxn236.overlay

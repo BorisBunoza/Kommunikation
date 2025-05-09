@@ -15,8 +15,9 @@
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/i2c.h>
+#include <zephyr/drivers/led.h>
 
-#define MSG_SIZE 8
+#define MSG_SIZE 1
 #define I2C_NODE DT_PROP(DT_PATH(zephyr_user), i2c)
 #define ADDRESS DT_PROP(DT_PATH(zephyr_user), address)
 
@@ -36,7 +37,64 @@ static int on_write_requested(struct i2c_target_config *config) { return 0; }
  */
 static int on_write_received(struct i2c_target_config *config, uint8_t val)
 {
-	buffer[count] = toupper(val);
+	const struct led_dt_spec red_dev = LED_DT_SPEC_GET(DT_NODELABEL(red_led));
+	const struct led_dt_spec green_dev = LED_DT_SPEC_GET(DT_NODELABEL(green_led));
+	const struct led_dt_spec blue_dev = LED_DT_SPEC_GET(DT_NODELABEL(blue_led));
+
+	if (!led_is_ready_dt(&red_dev) || !led_is_ready_dt(&green_dev) || !led_is_ready_dt(&blue_dev))
+	{
+		printk("LED device is not ready");
+		exit(EXIT_FAILURE);
+	}
+	
+	bool status = true;
+
+	if(val == 'R')
+	{
+		if ((0 != led_on_dt(&red_dev)) || (0 != led_off_dt(&green_dev)) || (0 != led_off_dt(&blue_dev)))
+		{
+			printk("Failed to turn the red LED on\n");
+			status = false;
+		}
+	}
+	else if(val == 'B')
+	{
+		if ((0 != led_off_dt(&red_dev)) || (0 != led_off_dt(&green_dev)) || (0 != led_on_dt(&blue_dev)))
+		{
+			printk("Failed to turn the blue LED on\n");
+			status = false;
+		}
+	}
+	else if (val == 'G')
+	{
+		if ((0 != led_off_dt(&red_dev)) || (0 != led_on_dt(&green_dev)) || (0 != led_off_dt(&blue_dev)))
+		{
+			printk("Failed to turn the green LED on\n");
+			status = false;
+		}
+	}
+	else if (val == 'O')
+	{
+		if ((0 != led_off_dt(&red_dev)) || (0 != led_off_dt(&green_dev)) || (0 != led_off_dt(&blue_dev)))
+		{
+			printk("Failed to turn off LED on\n");
+			status = false;
+		}
+	}
+	else
+	{
+		status = false;
+	}
+
+	if(status)
+	{
+		buffer[count] = 'D';
+	}
+	else
+	{
+		buffer[count] = 'F';
+	}
+
 	count = (count + 1) % MSG_SIZE;
 	return 0;
 }
@@ -102,7 +160,7 @@ int main(void)
 
 	while (1)
 	{
-		k_msleep(K_FOREVER);
+		;
 	}
 
 	return 0;
