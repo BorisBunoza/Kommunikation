@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/boards/nxp/frdm_mcxn236",
+		"source" : "/home/boris/zephyr/zephyr/boards/nxp/frdm_mcxn236"
+	}
+}

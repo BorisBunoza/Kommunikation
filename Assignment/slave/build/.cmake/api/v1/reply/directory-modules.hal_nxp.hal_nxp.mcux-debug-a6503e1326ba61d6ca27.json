@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/hal_nxp/hal_nxp/mcux",
+		"source" : "/home/boris/zephyr/modules/hal/nxp/mcux"
+	}
+}

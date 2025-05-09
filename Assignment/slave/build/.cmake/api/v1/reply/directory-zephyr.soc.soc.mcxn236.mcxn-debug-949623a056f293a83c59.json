@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/soc/soc/mcxn236/mcxn",
+		"source" : "/home/boris/zephyr/zephyr/soc/nxp/mcx/mcxn"
+	}
+}

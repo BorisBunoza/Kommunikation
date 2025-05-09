@@ -1,0 +1,52 @@
+cmake:
+  application:
+    configuration-dir: /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave
+    source-dir: /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave
+  board:
+    name: frdm_mcxn236
+    path:
+     - /home/boris/zephyr/zephyr/boards/nxp/frdm_mcxn236
+    qualifiers: mcxn236
+    revision: 
+  devicetree:
+    bindings-dirs:
+     - /home/boris/zephyr/zephyr/dts/bindings
+    files:
+     - /home/boris/zephyr/zephyr/boards/nxp/frdm_mcxn236/frdm_mcxn236.dts
+     - /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/frdm_mcxn236.overlay
+    include-dirs:
+     - /home/boris/zephyr/modules/hal/atmel/include
+     - /home/boris/zephyr/modules/hal/gigadevice/include
+     - /home/boris/zephyr/modules/hal/microchip/include
+     - /home/boris/zephyr/modules/hal/microchip/dts
+     - /home/boris/zephyr/modules/hal/nuvoton/dts
+     - /home/boris/zephyr/modules/hal/nxp/dts
+     - /home/boris/zephyr/modules/hal/stm32/dts
+     - /home/boris/zephyr/zephyr/include
+     - /home/boris/zephyr/zephyr/include/zephyr
+     - /home/boris/zephyr/zephyr/dts/common
+     - /home/boris/zephyr/zephyr/dts/x86
+     - /home/boris/zephyr/zephyr/dts/xtensa
+     - /home/boris/zephyr/zephyr/dts/sparc
+     - /home/boris/zephyr/zephyr/dts/riscv
+     - /home/boris/zephyr/zephyr/dts/posix
+     - /home/boris/zephyr/zephyr/dts/nios2
+     - /home/boris/zephyr/zephyr/dts/arm64
+     - /home/boris/zephyr/zephyr/dts/arm
+     - /home/boris/zephyr/zephyr/dts/arc
+     - /home/boris/zephyr/zephyr/dts
+    user-files:
+     - /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/frdm_mcxn236.overlay
+  kconfig:
+    files:
+     - /home/boris/zephyr/zephyr/boards/nxp/frdm_mcxn236/frdm_mcxn236_defconfig
+     - /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/prj.conf
+    user-files:
+     - /home/boris/Desktop/Kommunikation/Examples/V17/esp-frdm/slave/prj.conf
+  toolchain:
+    name: zephyr
+    path: /home/boris/zephyr-sdk-0.17.0
+  zephyr:
+    version: 4.1.0
+    zephyr-base: /home/boris/zephyr/zephyr
+version: 0.1.0

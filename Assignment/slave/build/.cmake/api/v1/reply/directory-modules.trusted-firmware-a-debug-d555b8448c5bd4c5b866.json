@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/trusted-firmware-a",
+		"source" : "/home/boris/zephyr/zephyr/modules/trusted-firmware-a"
+	}
+}
