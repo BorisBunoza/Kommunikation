@@ -79,6 +79,10 @@ static char get_command(char *string, size_t length)
     {
         chr = 'O';
     }
+    else if (len == 0)
+    {
+        chr = 'N';
+    }
     else
     {
         chr = 'F';
@@ -128,7 +132,7 @@ void app_main(void)
 
         buffer[0] = get_command(string, STRING_LEN);
 
-        if (buffer[0] != 'F')
+        if ((buffer[0] != 'F') && (buffer[0] != 'N'))
         {
             if (ESP_OK == i2c_master_transmit(dev_handle, buffer, MSG_SIZE, -1))
             {
@@ -136,27 +140,30 @@ void app_main(void)
                 {
                     if (buffer[0] == 'D')
                     {
-                        printf(" => done");
+                        printf(" => done\n");
                     }
                     else
                     {
-                        printf(" => fail");
+                        printf(" => fail\n");
                     }
                 }
                 else
                 {
-                    printf(" => fail");
+                    printf(" => fail\n");
                 }
             }
             else
             {
-                printf(" => fail");
+                printf(" => fail\n");
             }
+        }
+        else if (buffer[0] == 'F')
+        {
+            printf(" => fail\n");
         }
         else
         {
-            printf(" => fail");
+            printf("\n");
         }
-        printf("\n");
     }
 }
