@@ -22,13 +22,14 @@
 #include "nvs_flash.h"
 #include "esp_random.h"
 #include "host/ble_hs.h"
+#include <esp_task_wdt.h>
 #include "host/util/util.h"
 #include "bootloader_random.h"
 #include "nimble/nimble_port.h"
 #include "services/gap/ble_svc_gap.h"
 #include "nimble/nimble_port_freertos.h"
 
-#define BUFLEN 8
+#define BUFLEN 1
 #define TAG "CLIENT"
 #define DEVICE_NAME "BLE_CLIENT"
 
@@ -47,6 +48,8 @@ static uint16_t chrval_handle;
 // I.e. addr[5] shall be in the range of 0xC0 to 0xFF
 static const uint8_t server_addr[] = {0x01, 0x02, 0x03, 0x04, 0x05, 0xC0};
 static const uint8_t client_addr[] = {0x10, 0x20, 0x30, 0x40, 0x50, 0xC0};
+
+static bool newlin_check = false;
 
 // Initiates the GAP general discovery procedure.
 static void client_scan(void)
@@ -258,7 +261,18 @@ static int client_gap_event(struct ble_gap_event *event, void *)
         // Attribute data is in event->notify_rx.om.
         assert(0 == os_mbuf_copydata(event->notify_rx.om, 0, sizeof(buffer), buffer));
 
-        printf("Received: %.*s\n", sizeof(buffer), buffer);
+        switch (buffer[0])
+        {
+        case '1':
+            printf(" => done\n");
+            break;
+        case '0':
+            printf(" => failed\n");
+            break;
+
+        default:
+            break;
+        }
     }
     break;
 
@@ -304,31 +318,54 @@ void client_task(void *pvParameters)
 {
     ESP_LOGI(TAG, "BLE client task started");
 
-    bootloader_random_enable();
-    srand(esp_random());
-    bootloader_random_disable();
-
     uint8_t buffer[BUFLEN];
 
     while (1)
     {
-        for (int i = 0; i < BUFLEN; i++)
-        {
-            buffer[i] = 'a' + (rand() % 26);
-        }
-
         if (chrval_handle != 0)
         {
-            printf("\n    Sent: %.*s\n", BUFLEN, buffer);
-
-            /* Writing characteristics */
-            if (0 != ble_gattc_write_flat(connection, chrval_handle, buffer, sizeof(buffer), NULL, NULL))
+            printf("Enter the LED state [0 or 1]: ");
+            newlin_check = false;
+            while (getchar() != EOF)
             {
-                ESP_LOGE(TAG, "Error in writing characteristic");
+                ;
+            }
+
+            ESP_ERROR_CHECK(esp_task_wdt_delete(xTaskGetIdleTaskHandle()));
+
+            while (1)
+            {
+                buffer[0] = getchar();
+                if ((buffer[0] == '1') || (buffer[0] == '0'))
+                {
+                    putchar(buffer[0]);
+                    break;
+                }
+                else if (buffer[0] == '\n')
+                {
+                    putchar(buffer[0]);
+                    newlin_check = true;
+                    break;
+                }
+                else
+                {
+                    ;
+                }
+            }
+
+            ESP_ERROR_CHECK(esp_task_wdt_add(xTaskGetIdleTaskHandle()));
+
+            if (!newlin_check)
+            {
+                /* Writing characteristics */
+                if (0 != ble_gattc_write_flat(connection, chrval_handle, buffer, sizeof(buffer), NULL, NULL))
+                {
+                    ESP_LOGE(TAG, "Error in writing characteristic");
+                }
             }
         }
 
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        vTaskDelay(pdMS_TO_TICKS(300));
     }
 }
 
